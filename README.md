@@ -1,8 +1,6 @@
 ## 01. 자료형_변수
 
->  mutable: list, dictionary, set
->
-> immutable: number, string, tuple
+>  mutable: list, dictionary, set	/	immutable: number, string, tuple
 
 ```python
 # String (Formatting)
@@ -127,9 +125,49 @@ print(list_a)
 
 ## 03. 함수
 
+```python
+# 매개변수의 갯수를 정해두지 않으려면 *args (튜플 형태로 반환)
+
+def total(*args):
+    total = 0
+    for i in args:
+        total += i
+    return total
+
+num = total(1, 2, 3, 4)
+num1 = total(1, 2, 3)
+
+print(num, num1)
+```
+
+```python
+# keyword를 지정하는 arguments **kwargs (딕셔너리 형태로 반환)
+
+def func(*args, **kwargs):
+    return args, kwargs
+
+num2 = func('a', 'b', a=1, b=2)
+print(num2)
+```
+
+```python
+# 일회성 함수
+
+lambda_list = [lambda a, b: a+b, lambda a, b: a-b]
+print(lambda_list[0](5, 2), lambda_list[1](5, 2))
+```
+
 
 
 
 
 ## 04. 입력_출력
+
+```python
+a = 'score'
+b = 100
+
+print(a + str(b))		#score100
+print(a, b)					#score 100
+```
 
