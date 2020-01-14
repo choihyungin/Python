@@ -171,3 +171,35 @@ print(a + str(b))		#score100
 print(a, b)					#score 100
 ```
 
+```python
+import pickle
+
+file = open('test.bin', 'wb')
+list1 = ['1', 2, 3]
+pickle.dump(list1, file)
+file.close()
+
+result = pickle.load(file)
+print(result)
+```
+
+```python
+file = open('test.txt', 'rt')
+
+#file.read()
+file.read()
+
+#file.readline()
+while True:
+  result = file.readline()		
+  if not result:
+    break
+   else:
+    print(result)
+
+#file.readlines()    
+result = file.readlines()
+for i in result:
+  print(i)
+```
+
