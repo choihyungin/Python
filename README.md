@@ -209,5 +209,31 @@ for i in result:
 
 ## 05. 클래스
 
-![class](README.assets/class_img.png)
+<img src="README.assets/class_img.png" alt="class" style="zoom:67%;" />
+
+```python
+# 모듈 (= 라이브러리)
+
+import Calculator
+Calculator.minus(5, 3)
+
+from Calculator as cal
+cal.minus(5, 3)
+
+from Calculator import minus
+minus(5, 3)
+
+from Calculator import *
+minus(5, 3)
+plus(5, 3)
+```
+
+```python
+# 모듈 만들어서 사용하기 (같은 위치에 클래스/함수 만들고 .py 확장자로 저장)
+
+import test
+test.plus(5, 3)
+```
+
+
 
