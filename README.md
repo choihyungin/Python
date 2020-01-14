@@ -203,3 +203,11 @@ for i in result:
   print(i)
 ```
 
+
+
+
+
+## 05. 클래스
+
+![class](README.assets/class_img.png)
+
