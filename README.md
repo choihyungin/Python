@@ -310,3 +310,11 @@ print(list(filter(lambda n : n>= 0, num_list)))
 
 ![builtins](README.assets/builtins.png)
 
+
+
+
+
+# 08. 외장함수
+
+![module](README.assets/module.png)
+
