@@ -157,6 +157,20 @@ lambda_list = [lambda a, b: a+b, lambda a, b: a-b]
 print(lambda_list[0](5, 2), lambda_list[1](5, 2))
 ```
 
+```python
+# global의 역할
+
+result = 0
+
+def add(num):
+    global result
+    result += num
+    return result
+
+print(add(3))	# 3
+print(add(4)) # 7
+```
+
 
 
 
@@ -236,4 +250,63 @@ test.plus(5, 3)
 ```
 
 
+
+
+
+# 06. 예외처리
+
+```python
+# else (예외가 발생하지 않았다면 try에 이어 else까지 실행)
+
+try:
+    file = open('python.txt', 'r')
+except:
+    print('예외발생')
+else:
+    file.read() 
+    print(file) 
+    file.close()
+```
+
+```python
+# finally (예외 발생 여부와 상관 없이 항상 실행되는 finally)
+
+try:
+    file = open('test.txt', 'r') 
+    print('file open')
+    text = file.read() print(text)
+    text += 1
+except TypeError as e:
+    print(e, '예외발생')
+finally:
+    file.close()
+```
+
+
+
+
+
+# 07. 내장함수
+
+```python
+# 모든 내장함수
+print(dir(__builtins__))
+```
+
+```python
+# 상황에 맞는 내장함수 찾기
+
+s = set()
+print(dir(s))		# set에 사용할 수 있는 내장함수 print
+s.add(1)
+```
+
+```python
+# filter w.lambda
+
+num_list = [1, -2, 3, -5, 8, -3]
+print(list(filter(lambda n : n>= 0, num_list)))
+```
+
+![builtins](README.assets/builtins.png)
 
