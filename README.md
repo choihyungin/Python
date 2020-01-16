@@ -318,3 +318,18 @@ print(list(filter(lambda n : n>= 0, num_list)))
 
 ![module](README.assets/module.png)
 
+
+
+
+
+# 10. 크롤링
+
+> 크롤링을 하기 위해 필요한 라이브러리
+>
+> - 데이터 통신: **requests** / urllib / urllib2
+>
+> - 파싱: **bs4** (BeautifulSoup)
+> - **Selenium** = requests + bs4
+
+
+
